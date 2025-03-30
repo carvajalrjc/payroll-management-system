@@ -1,81 +1,81 @@
-# Sistema de Gestión de Nómina en C++
+# Payroll Management System in C++
 
-Este proyecto es una aplicación de consola escrita en **C++** que permite gestionar la nómina de una empresa. Fue desarrollado como proyecto final para el curso **Introducción a la Programación** en la **Pontificia Universidad Javeriana**.
+This project is a console-based application written in **C++** to manage the payroll of a company. It was developed as the final project for the **Introduction to Programming** course at the **Pontificia Universidad Javeriana**.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-El sistema permite manejar tres tipos de empleados: **Empleados Administrativos**, **Profesores** y **Monitores**, con características y reglas de salario específicas para cada uno.
+The system handles three types of employees: **Administrative Staff**, **Professors**, and **Monitors**, each with specific attributes and salary rules.
 
-### 📋 Menú de opciones:
+### 📋 Menu Options:
 
-1. Cargar empleados desde un archivo `Nomina.txt`
-2. Agregar un nuevo empleado
-3. Eliminar un empleado por cédula
-4. Añadir asignatura a un profesor
-5. Añadir asignatura a un monitor
-6. Calcular salario de un empleado
-7. Calcular salario de un profesor
-8. Calcular salario de un monitor
-9. Generar el reporte de nómina en `Reporte.txt`
-0. Salir
-
----
-
-## 🧠 Estructura del proyecto
-
-El sistema se basa en estructuras (`struct`) para organizar los datos:
-
-- `Empleado`: nombre, apellido, cédula, tipo de cargo, salario
-- `Cargo`: puesto, escalafón (si aplica), lista de asignaturas
-- `Asignatura`: nombre y número de horas
+1. Load employees from a `Nomina.txt` file  
+2. Add a new employee  
+3. Delete an employee by ID  
+4. Add a subject to a professor  
+5. Add a subject to a monitor  
+6. Calculate the salary of an employee  
+7. Calculate the salary of a professor  
+8. Calculate the salary of a monitor  
+9. Generate the payroll report in `Reporte.txt`  
+0. Exit
 
 ---
 
-## 💸 Reglas de cálculo de salario
+## 🧠 Project Structure
 
-- **Empleado**:  
-  `salario = salarios_mínimos * 1.000.000 * 0.75` (descuento de ley)
+The system is based on `struct`s to organize the data:
 
-- **Profesor**:  
-  `salario = escalafón * salario_mínimo * (total_horas * 0.75)`  
-  Escalafones:
+- `Empleado`: name, surname, ID, job type, salary  
+- `Cargo`: position, rank (if applicable), list of subjects  
+- `Asignatura`: subject name and number of hours
+
+---
+
+## 💸 Salary Calculation Rules
+
+- **Employee**:  
+  `salary = minimum_wages * 1,000,000 * 0.75` (includes legal deductions)
+
+- **Professor**:  
+  `salary = rank * minimum_wage * (total_hours * 0.75)`  
+  Ranks:
     - Catedra → 0.5  
     - Instructor → 1  
-    - Asistente → 1.5  
-    - Asociado → 2  
-    - Titular → 2.5  
+    - Assistant → 1.5  
+    - Associate → 2  
+    - Full (Titular) → 2.5  
 
 - **Monitor**:  
-  `salario = total_horas * 7.197` (no hay descuentos)
+  `salary = total_hours * 7,197` (no deductions applied)
 
 ---
 
-## 🛠️ Cómo compilar y ejecutar (en macOS)
+## 🛠️ How to Compile and Run (on macOS)
 
 ```bash
 clang++ Proyecto_final.cpp -o nomina
 ./nomina
 ```
-O con g++ si lo tienes 
+Or with g++ if installed:
 ```bash
 g++ Proyecto_final.cpp -o nomina
 ./nomina
 ```
 
-### 📌 Consideraciones
+### 📌 Considerations
 
-- No se permiten empleados duplicados.
-- Al eliminar un empleado, se reacomoda el arreglo para mantener la integridad de la lista.
-- El cálculo del salario se realiza manualmente a través del menú (opciones 6, 7 y 8).
-- El sistema utiliza arreglos estáticos y estructuras (`struct`).
-- No se usaron punteros ni referencias, de acuerdo con los temas cubiertos en el curso.
-- La variable `cantidad_empleados` se maneja como global para simplificar el flujo de datos.
+- Duplicate employees are not allowed.
+- When an employee is deleted, the array is reorganized to preserve structure,
+- Salary is calculated manually through menu options (6, 7, and 8).
+- The system uses static arrays and simple structs.
+- No pointers or references are used, in accordance with the course's scope.
+- The `cantidad_empleados` variable is managed globally for simplicity.
 
 ---
 
-### 📚 Créditos
+### 📚 Credits
 
-- **Proyecto desarrollado por**: Juan Camilo Carvajal Rodríguez
-- **Curso**: Introducción a la Programación  
-- **Universidad**: Pontificia Universidad Javeriana  
-- **Profesor**: Jose Hernando Hurtado Rojas
+- **Proyect developed by**: Juan Camilo Carvajal Rodríguez
+- **Course**: Introduction to Programming 
+- **University**: Pontificia Universidad Javeriana  
+- **Professor**: Jose Hernando Hurtado Rojas
