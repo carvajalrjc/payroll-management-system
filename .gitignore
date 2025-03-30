@@ -1,0 +1,18 @@
+# Compiled binary files
+*.exe
+*.o
+Proyecto_final
+proyectoFinal
+
+# Output and generated files
+Reporte.txt
+
+# Dev-C++ project files (optional: keep .dev if needed)
+*.layout
+Makefile.win
+
+# macOS system files
+.DS_Store
+
+# macOS debug symbols
+*.dSYM/
