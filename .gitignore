@@ -16,3 +16,7 @@ Makefile.win
 
 # macOS debug symbols
 *.dSYM/
+
+# Visual Studio Code settings
+.vscode/
+*.dSYM/
