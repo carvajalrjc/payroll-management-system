@@ -1,0 +1,25 @@
+Ana Castro 123 Profesor Titular
+2
+Programacion_Basica 10
+POO 20
+#
+Berenice Suarez 456 Empleado Contabilidad 5
+#
+Estefania Bermudez 567 Monitor
+2
+Programacion_Basica 30
+Programacion_Basica 30
+#
+Alejandro Sierra 222 Profesor Asistente
+2
+Bases_de_Datos 50
+Gestión_de_Datos 30
+#
+Diana Bustamante 333 Empleado Personal_Administrativo
+2
+#
+Juan Garcés 444 Monitor
+1
+Ingeniería_de_Sw 15
+#
+FIN
